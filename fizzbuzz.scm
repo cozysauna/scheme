@@ -11,6 +11,14 @@
   )
 )
 
-(print (fizzbuzz 15))
-(print (fizzbuzz 10))
-(print (fizzbuzz 2))
+(define (loop-fizzbuzz x)
+  (if (eq? x 0)
+    ()
+    (begin
+      (loop-fizzbuzz (- x 1))
+      (print (fizzbuzz x))
+    )
+  )
+)
+
+(loop-fizzbuzz 15)
